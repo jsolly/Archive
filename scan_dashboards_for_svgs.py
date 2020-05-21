@@ -1,6 +1,6 @@
-from other.my_secrets import get_regression_devext_dbqa_gis
+from other.my_secrets import MySecrets
 
-REGRESSION_GIS = get_regression_devext_dbqa_gis()
+REGRESSION_GIS = MySecrets.get_regression_devext_dbqa_gis()
 
 
 items = REGRESSION_GIS.content.search(

@@ -1,8 +1,10 @@
 import random
 import time
-from other.my_secrets import get_regression_devext_dbqa_gis, AGOL_ITEM_DICT
+from other.my_secrets import MySecrets
 
-REGRESSION_GIS = get_regression_devext_dbqa_gis()
+
+GIS_OBJ = MySecrets.get_regression_devext_dbqa_gis()
+AGOL_ITEM_DICT = MySecrets.AGOL_ITEM_DICT
 
 
 def modify_feature_layer(feature_layer):
@@ -39,7 +41,7 @@ def modify_feature_layer(feature_layer):
 
 if __name__ == "__main__":
     LAYER_ITEM_ID = AGOL_ITEM_DICT["DEVEXT_FEATURE_LAYER_ITEM"]
-    LAYER = REGRESSION_GIS.content.get(LAYER_ITEM_ID)
+    LAYER = GIS_OBJ.content.get(LAYER_ITEM_ID)
     while True:
         try:
             START_TIME = time.time()

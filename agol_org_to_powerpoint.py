@@ -2,9 +2,10 @@ from pptx import Presentation
 from pptx.util import Inches
 from io import BytesIO
 from urllib import request
-from other.my_secrets import get_regression_devext_dbqa_gis
+from other.my_secrets import MySecrets
 
-REGRESSION_GIS = get_regression_devext_dbqa_gis()
+MY_SECRETS = MySecrets()
+REGRESSION_GIS = MY_SECRETS.get_regression_devext_dbqa_gis()
 
 
 def get_items_from_folder(
